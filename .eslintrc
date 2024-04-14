@@ -1,0 +1,51 @@
+{
+  "root": true,
+  "extends": ["airbnb-base", "plugin:eslint-plugin/recommended"],
+  "plugins": ["eslint-plugin"],
+  "env": {
+    "es6": true,
+    "node": true,
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true,
+    },
+    "sourceType": "module",
+  },
+  "ignorePatterns": ["coverage/", ".nyc_output/"],
+  "rules": {
+    "comma-dangle": [2, "always-multiline"],
+    "object-shorthand": [
+      2,
+      "always",
+      {
+        "ignoreConstructors": false,
+        "avoidQuotes": false,
+      },
+    ],
+    "max-len": [
+      2,
+      120,
+      {
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreComments": true,
+      },
+    ],
+    "consistent-return": 0,
+
+    "prefer-destructuring": [
+      2,
+      {"array": false, "object": false},
+      {"enforceForRenamedProperties": false},
+    ],
+    "function-call-argument-newline": 1,
+    "function-paren-newline": 0,
+    "no-plusplus": [2, {"allowForLoopAfterthoughts": true}],
+    "no-param-reassign": 1,
+    "no-restricted-syntax": 2,
+    "strict": [2, "safe"],
+  },
+  "overrides": [],
+}
